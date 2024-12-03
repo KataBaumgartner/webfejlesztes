@@ -1,0 +1,1252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {scroll-behavior: smooth;}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: #FFE8D6;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+}
+
+.hamburger div {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 3px;
+    transition: 0.3s;}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* kell hozzá hogy a menü alá "tapadjon" */
+    padding: 10px 15px;
+    background-color: #6B705C;
+    color: white;
+
+    font-family: "Borel", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    padding: 20px 10px 0 10px;}
+
+
+.menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: rgb(165, 165, 141, 0.92);
+
+    border-radius: 0 0 8px 8px;
+    list-style: none;
+
+/* animáció */
+    width: 100%;
+    transition: height 0.3s ease; 
+    z-index: 1000;}
+
+.menu.open {
+    height: 310px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li {
+    padding: 20px 0 10px 0;
+    text-align: center;}
+
+.menu li a{
+    font-family: "Montserrat", Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+/* sötétebb kiemelés */
+.menu li:hover {
+    background-color: #8C8C77;}
+
+
+/* innentől menü alatt */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;}
+
+.bemutatkozas {
+    background-color: #DDBEA9;
+    padding: 15px;
+    border-radius: 8px;
+    color: #444;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;}
+
+.bemutatkozas h2 {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5em;}
+
+.kiemeles a{
+    font-style: italic;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+}
+
+
+.bemutatkozas p{padding: 6px 0;}
+
+
+/* aláhúzás animációja */
+.alahuzas {
+    text-decoration: none; 
+    position: relative;
+    display: inline;
+    background-position: 0 100%; /* alatta */
+    background-image: linear-gradient(white, white);
+    background-repeat: no-repeat;
+    background-size: 0 2px; /* kezdetben 0 szélesség */
+    transition: background-size 0.4s ease-in-out; }
+
+.alahuzas:hover {
+    background-size: 100% 2px; /* full szélesség */}
+
+
+
+
+.cimunk{
+    background-color: #6B705C;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 10px 5px ;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    }
+
+.cimunk p{padding: 6px;}
+
+
+.terkep{width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;}
+
+.terkep iframe{height: 400px;
+width: 100%;}
+
+
+/* innentől a nyitvatartás felsorolása */
+.nyitvatartas {
+    max-width: 100%;
+    margin: 0px;
+    background-color: #DDBEA9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nyitvatartas h1 {
+    text-align: center;
+    color: #444;
+    padding-bottom: 10px;
+}
+.nyitvatartas ul {
+    list-style: none;
+    padding: 0;
+}
+.nyitvatartas li {
+    padding: 10px 0;
+    border-bottom: 1px solid #CB997E;
+    display: flex;
+    justify-content: space-between;
+}
+.nap {
+    font-weight: bold;
+    color: #555;
+}
+.orak {
+    color: #777;
+}
+
+/* négyzetes lehetőségek */
+.profilok {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    justify-content: center;
+}
+
+.profilokcim p{
+    text-align: center;
+    font-weight: bold;
+    color: #555;}
+
+.profilok article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    padding: 3%;
+    text-align: center;
+    font-size: 1em;
+    flex-grow: 1.5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.profilok article h2{margin-bottom: 3px;}
+
+.profilok article a{
+    font-size: 0.8em;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+
+
+}
+
+
+.allando{width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.58),rgba(0, 0, 0, 0.55)) , url(kepek/allandokinalat.avif);
+    background-position: center;
+    background-size: cover;}
+
+.szezonalis{width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.58),rgba(0, 0, 0, 0.55)) , url(kepek/mezeskalacs.avif);
+    background-position: center;
+    background-size: cover;}
+
+.eskuvo{width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.58),rgba(0, 0, 0, 0.55)) , url(kepek/lovetorta.avif);
+    background-position: center;
+    background-size: cover;}
+
+.ajanlat{width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.58),rgba(0, 0, 0, 0.55)) , url(kepek/alkalom_desszertek.jpeg);
+    background-position: center;
+    background-size: cover;}
+
+
+/* lábléc */
+.lablec {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #6b705c;
+    color: #d6d6d6;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 12px;}
+
+.lablec p{padding: 4px 0;}
+
+.mapslink{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-style: italic;}
+
+
+/* galéria */
+.slider {
+    width: 100%;
+    min-width: 350px;
+    margin: 10px auto;
+    justify-content: center;
+}
+
+.slick-slide {
+    margin: 0px 5px;
+}
+
+.slick-slide img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.center .slick-next {
+    right: 20px;
+    z-index: 1;}
+
+.center .slick-prev {
+    left: 20px;
+    z-index: 1;}
+
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: .5;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+/* -------------------- kinalat --------------------- */
+
+.jelmagyarazat {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin: 0 auto; 
+    padding-top: 20px;
+    width: 200px; 
+}
+
+.jelmagyarazat-sor {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+    justify-content: flex-start; 
+}
+
+.barmelyik{width: 100%;
+display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allergiajel {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    color: white;
+    font-weight: bold;
+    margin-right: 10px; 
+    text-align: center;
+}
+
+.gluten {
+    background-color: #F4C431; 
+}
+
+.vegan {
+    background-color: #00A550; 
+}
+
+.cukormentes {
+    background-color: #6CB4EE; 
+}
+
+.magyarazat {
+    font-size: 1.1em; 
+    color: #333; 
+}
+
+    /* Kategóriák */
+    .kategoria {
+        margin: 20px ;
+        padding: 0;
+    }
+    
+    .kategoria h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    /* termekek */
+    .termekek {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        justify-content: space-around;
+    }
+    
+    .termekkartya {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+    
+    .termekkartya:hover {
+        transform: scale(1.05);
+    }
+    
+    .termekkartya img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .leiras {
+        padding: 15px;
+    }
+    
+    .leiras h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .leiras p {
+        font-size: 16px;
+        color: #777;
+    }
+    
+/* mentességek */
+    
+
+    .allergia{position: absolute;
+        top: 10px;
+        right: 10px;}
+
+    .allergia span {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: white;
+        font-weight: bold;
+        display: inline-block;
+    }
+    
+
+.allergia .gluten {
+    background-color: #F4C431;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.allergia .vegan {
+    background-color: #00A550;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.allergia .cukor {
+    background-color: #6CB4EE;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+
+/* -------------------- szezonalis --------------------- */
+
+.kozepre main{display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+.kar-felirat {
+    background: linear-gradient(rgba(0, 0, 0, 0.48),rgba(0, 0, 0, 0.45)), url('kepek/karacsonyi/karacsonyhatter.avif') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.kar-felirat h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.kar-felirat p {
+    font-size: 1.2em;
+}
+
+
+.tudnivalok {
+    width: 100%;
+    padding: 20px;
+
+}
+
+.tudnivalok h3{
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;}
+
+.tudnivalok p{padding: 5px 0;
+    text-align: left;}
+
+.tudnivalok p em{font-size: 1.1em;
+    color: #B22222;}
+
+.piros{color: #B22222;}
+
+
+.unnepi_nyitvatartas {
+    width: 95%; 
+    margin: 10px auto 30px auto;
+    background-color: #6B705C;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.unnepi_nyitvatartas h2 {
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+}
+.unnepi_nyitvatartas ul {
+    list-style: none;
+    padding: 0;
+}
+.unnepi_nyitvatartas  li {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+.datum {
+    font-weight: bold;
+    color: white;
+}
+.u_orak {
+    color: white;
+}
+
+/* karácsonyi termékek */
+.kar-ajanlatok {
+    text-align: center;
+    padding: 20px;
+}
+
+.kar-ajanlatok h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6B705C;
+}
+
+.kar-termekek {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.kar-termekkartya {
+    background: #FFF7F0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.kar-termekkartya:hover {
+    transform: scale(1.05);
+}
+
+.kar-termekkartya img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.kar-leiras {
+    padding: 15px;
+}
+
+.kar-leiras h4 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.kar-leiras p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.csomagolas {
+    width: 95%; 
+    margin: 10px auto 30px auto; /* Középre igazítás automatikus margóval */
+    background-color: #FFF7F0; /* Világos háttérszín */
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.csomagolas h3 {
+    text-align: center; 
+    font-size: 1.5em;
+    color: #B22222; 
+    margin-bottom: 20px; 
+}
+
+.csomagolas p {
+    text-align: left; 
+    color: #333; 
+    line-height: 1.6; 
+    margin-bottom: 10px; 
+}
+
+.csomagolas a {
+    color: #B22222; 
+    text-decoration: none;
+    font-weight: bold; 
+    background-image: linear-gradient(#B22222, #B22222);
+}
+
+.csomagolas strong {
+    font-weight: normal; 
+}
+
+
+
+
+/* -------------------- eskuvo --------------------- */
+
+.eskuvomain{display: flex;
+    flex-direction: column;
+
+
+}
+
+.eskuvo_bevezeto {
+    margin: 0; 
+    background-color: #8C8C77; 
+    color: white;
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.eskuvo_bevezeto h2 {
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;  
+    text-align: left; 
+}
+
+.eskuvo_bevezeto p {
+    font-size: 1em;
+    padding: 5px 0;
+}
+
+.eskuvo_bevezeto p strong {
+    font-weight: 700; 
+    color: #6a4e3f; 
+}
+
+.nagytorta,.nakedtorta{border-radius: 8px;
+    width: 100%;}
+
+
+
+.eskuvo_bevezeto{order:0;}
+.nagytorta{order:1;}
+.tortak{order: 2;}
+.tortaizek{order:3;}
+.konzultacio{order: 4;}
+.nakedtorta{order: 5;}
+
+.atgondolni{order: 6;
+    margin: 0 20px;}
+
+.atgondolni ul{padding-inline-start: 40px;}
+
+.atgondolni p{text-align: justify;}
+
+.atgondolni a{font-weight: bold;
+    color: #6B705C;
+    background-image: linear-gradient(#6B705C, #6B705C);
+    }
+
+.konzultacio{
+    padding: 10px;
+    background-color: #8C8C77;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);}
+
+.konzultacio h3{
+    font-size: 1.5em;
+    padding-bottom: 5px;
+    }
+
+.konzultacio p{padding: 5px 0;}
+
+.elerhetoseg{font-weight: bold;
+font-size: 1.1em;
+text-decoration: 0;
+color: white;}
+
+
+
+
+
+
+/* tortak leirasai */
+    .tortak {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .tortak h1 {
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #6B705C;
+    }
+    
+    .tortainfo, .tortainfo2{
+        font-size: 1em;
+        text-align: justify;
+        margin-bottom: 15px;
+        color: #555;
+    }
+    
+    .tortameretek h2, .tortaizek h2, .atgondolni h2{
+        font-size: 1.5em;
+        margin: 20px 0;
+        color: #6B705C;
+    }
+    
+
+    .tortaizek h3, .atgondolni h3 {
+        font-size: 1.1em;
+        color: #6B705C;
+        margin: 10px 0;
+    }
+    
+    .tortameretek ul, .tortaizek ul, .atgondolni ul{
+        list-style-type: circle;
+    }
+
+    .tortameretek ul li, .tortaizek ul li, .atgondolni ul li, .atgondolni p{
+        font-size: 1em;
+        color: #333;
+        padding: 3px;
+        margin-bottom: 5px;
+    }
+    
+
+    
+    .tortameretek, .tortaizek{
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    .csokolade h3, .gyumolcsos h3, .egyebizek h3{
+        padding-top: 15px;}
+    
+    .unneoi_mennyseg p{font-weight: bold;}
+
+
+
+/* -------------------- ajanlat --------------------- */
+
+
+.sutemeny_reszletek, .torta_reszletek, .elorendeles_reszletek, .makosdiv, .diosdiv, .osszesites, .elkuldes{
+    display: none;}
+
+
+.ajanlatmain {display: flex;
+flex-direction: column;
+gap: 30px;
+align-items: center;
+width: 100%;}
+
+.udv_rendeles {
+    margin: 0; 
+    background-color: #8C8C77; 
+    color: white;
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.udv_rendeles h2 {
+    padding: 5px 0;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5em;  
+    text-align: left; 
+}
+
+.udv_rendeles p {
+    font-size: 1em;
+    padding: 5px 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.ajanlatmain h3 {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 20px 0;
+}
+
+.ajanlatmain p{margin: 10px 0;}
+
+label {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin: 5px 0; 
+}
+
+#fomenu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+input[type="number"], input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+    width: 1.2em;
+    height: 1.2em;
+  accent-color: #cb997e;
+
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #cb997e;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.button:hover {
+    background-color: #b78a73;
+}
+
+.cukormentes_dontes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.makosvdios, .csomagolaskerdes{display: flex;
+flex-direction: column;}
+
+
+.makoscheckbox, .dioscheckbox,  .hazhozkerdes, .papirkerdes, .kartyakerdes, .aszf ,.fizmod_rendezes{display: flex;
+flex-direction: row;
+align-items: center;
+gap: 10px;}
+
+
+
+
+/* összesítés */
+.osszesites {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.osszesites h2{padding-bottom: 15px;}
+
+.osszesites p{font-weight: bold;}
+
+#ossz_termekek {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#elkuldes input[type="submit"] {
+    padding: 12px 30px;
+    background-color: #228B22;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+#elkuldes input[type="submit"]:hover {
+    background-color: #175E17;
+}
+
+
+/* ----------------------------------------------------------------------------------------*/
+
+/* tabletre vonatkozó beállítások 600px */
+@media only screen and (min-width: 600px) {
+    .menu{width: 33%;
+    right:0;
+    left: auto;}
+
+    .menu li {
+        text-align: left;
+        padding-left: 20px;}
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 20px;}
+
+    .profilok {
+        order: 4;
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 10px;
+        justify-content: center;}
+
+    .profilok article {
+        width: calc(50% - 10px); 
+        height: 200px;}
+
+    .elrendezes_segito{display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;}
+
+    .nyitvatartas{
+        order:1;
+        width: 65%;}
+
+    .cimunk{display: flex;
+        flex-direction: column;
+        justify-content: center;
+        order: 2;
+        width: 33%;
+        padding: 10px;
+        margin-bottom: 0;}
+    
+    .terkep{order: 3;
+        margin-top: 10px;
+    }
+    
+    .cimunk p {padding: 20px 0;}
+
+    .slick-slide img {
+        height: 300px;}
+
+/* ---------- kinalat ---------- */
+
+.termekkartya {
+    width: calc(50% - 30px);}
+
+
+/* ---------- szezonalis ----------- */
+
+.kar-termekkartya {
+    width: calc(50% - 30px);}
+
+/* ---------- eskuvo ----------- */
+
+
+
+.eskuvomain{display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;}
+
+.eskuvo_bevezeto{order: 0;
+    flex: 1;
+    max-width: 65%;}
+
+.nagytorta{order: 1;
+    width: 100%;
+    height: auto;
+    max-width: 35%;
+    object-fit: contain;}
+.tortak{order:2;}
+
+
+
+.nakedtorta{order: 3;
+    height: 100%;
+    max-width: calc(40% - 10px);
+}
+
+.konzultacio{order: 4;
+    max-width: calc(60% - 10px);
+    height: auto;
+    object-fit: contain;
+    flex: 1;}
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------------*/
+
+/* számítógépre vonatkozó beállítások 768px */
+@media only screen and (min-width: 768px) {
+
+    .menu {
+        display: flex; 
+        flex-direction: row;
+        justify-content: end;
+        top: 50px;
+        right: 10px;
+        background-color: transparent;
+        box-shadow: none;
+        height: auto;
+        width: 65%;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .menu.open {
+        height: auto;
+    }
+
+    .menu li {
+        display: flex;
+        text-wrap: nowrap;
+        margin: 0 2%; 
+        padding: 0;}
+        
+    .menu li:hover{background-color: transparent;}
+
+    .menu li a{
+        font-size: 1.5vw; 
+        text-decoration: none; 
+        position: relative;
+        display: inline;
+        background-position: 0 100%;
+        background-image: linear-gradient(white, white);
+        background-repeat: no-repeat;
+        background-size: 0 2px;
+        transition: background-size 0.4s ease-in-out; }
+    
+    .menu li a:hover {
+        background-size: 100% 2px;
+        }
+    
+    .menu li a.active{color: white;
+    font-weight: bold;
+    background-size: 0;}
+
+    .hamburger {
+        display: none;}
+
+    header h1 {
+        font-size: 3.5vw;
+        margin: 0;
+        padding: 20px 10px 0 10px;}
+
+    .elrendezes_segito{justify-content: space-between;}
+    .nyitvatartas{order: 0;
+        width: 40%;
+        box-sizing: border-box;
+        padding-bottom: 0;
+        margin-bottom: 10px;}
+
+    .terkep{order: 1;
+    width: 58%;
+    height: 100%;
+    box-sizing: border-box;}
+    
+    .cimunk{order: 2;
+        width: 100%;
+    padding: 0;}
+
+    .cimunk p{padding: 6px 0;}
+    
+    
+    .profilok {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        gap: 10px;
+        justify-content: space-between;
+        width: 100%;}
+
+    
+    .profilok article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 23%;
+        height: 300px}
+    
+    /* ---------- kinalat ---------- */
+
+
+    .termekkartya {
+        margin: 5px;
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+        
+    .kategoria h3 {
+        text-align: left;
+        padding-left: 20px;}
+    
+    
+    
+    .leiras h4 {
+        font-size: 2vw;}
+
+    
+    /* ---------- szezonalis ---------- */
+    
+    .tudnivalok{
+        width: 100%;}
+    
+    .tudnivalok p{text-align: center;
+        padding: 5px 15%;}
+
+    .kar-termekkartya {
+        width: calc(25% - 15px);}
+
+    .kar-leiras h4 {
+        font-size: 2vw;
+    }
+    
+    .kar-leiras p {
+        font-size: 1.5vw;
+    }
+
+    .szezonalismain{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+  
+    }
+    .unnepi_nyitvatartas{
+        order: 2;
+        width: 47%;
+        box-sizing: border-box;
+        margin-left: 10px;
+}
+
+    .csomagolas{
+        order: 3;
+        width: 47%;
+        box-sizing: border-box;
+        margin-right: 10px;
+}
+
+    .kar-ajanlatok{order: 1;}
+
+
+/* ---------- eskuvo ---------- */
+
+.eskuvomain{flex-direction: row;
+justify-content: center;}
+
+.eskuvo_bevezeto{order:0;
+    flex:none;
+
+   max-width: 100%;
+   width: 100%;}
+
+.tortak{order: 1;
+width: 100%;
+margin: 0;
+display: flex;}
+
+.izelrendezes{display: flex;
+flex-direction: row;
+gap: 10%;}
+
+.tortainfo{text-align: center;}
+.tortainfo2{order: 8;
+text-align: center;}
+
+.nagytorta{order:2;
+width: auto;
+height:400px;
+}
+
+.nakedtorta{order: 3;
+    width: auto;
+    height: 400px;}
+
+.tortaizek{order:4;}
+
+.konzultacio{order: 5;
+    max-width: 100%;
+    width: 100%;
+    flex: none;}
+
+.atgondolni{order: 6;}
+
+
+/* ---------- ajanlat ---------- */
+
+
+input[type="number"], select,  input[type="text"], input[type="date"]{width: 40%;}
+
+.sutemeny_mennyiseg{display: flex;
+flex-direction: row;
+justify-content: left;
+align-items: start;
+gap: 30px;}
+}
