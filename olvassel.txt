@@ -1,0 +1,19 @@
+1. Készítette: Baumgartner Katalin
+
+2. Weblap URL címe:  https://github.com/...
+
+3. Rövid leírás: Egy kitalált budapesti cukrászat oldala, ahol megtekinthető a kínálatuk, szezonális ajánlataik, esküvői kínálatuk, valamint árajánlatot is lehet kérni.
+
+4. JavaScript kód: Az ajanlat.html oldalon található kód egy árajánlat kalkuláló felületet mutat, aminek első részben a kategóriát, majd a termékeket kell kiválasztani, majd végül az utolsó fázisban a vevő személyes adatait kéri be, amit a jQuery validál.
+
+5. A használt Google web fonttípusok forrása: https://fonts.googleapis.com/css2?family=Borel&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap
+  A "Borel" betűtípusra headerben használtam az oldal címeként, ami minden html fájlban megjelenik.
+  A "Montserrat" betűtípust a teljes bodyra és a lenyíló menüre alkalmaztam, szintén minden oldalon.
+  A "Parisienne" betűtípus kizárólag az eskuvo.html-ben látszik, a bevezető szöveg címén.
+
+7. Az átvett kódok: 
+	Hamburger menü: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+	Linear-gradient alkalmazása aláhúzásként: https://css-irl.info/animating-underlines/
+	Linear-gradient alkalmazása sötétítésként: https://dev.to/nazanin_ashrafi/how-to-darken-an-image-with-css-4f5h
+	Google-maps iframe: https://www.maps.ie/create-google-map/
+	Telefonszám-formátum validálás: https://stackoverflow.com/questions/19840301/how-to-use-jquery-to-validate-north-american-phone-number
