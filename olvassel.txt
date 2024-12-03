@@ -1,6 +1,6 @@
 1. Készítette: Baumgartner Katalin
 
-2. Weblap URL címe:  https://github.com/...
+2. Weblap URL címe:  https://katabaumgartner.github.io/webfejlesztes/
 
 3. Rövid leírás: Egy kitalált budapesti cukrászat oldala, ahol megtekinthető a kínálatuk, szezonális ajánlataik, esküvői kínálatuk, valamint árajánlatot is lehet kérni.
 
@@ -17,3 +17,4 @@
 	Linear-gradient alkalmazása sötétítésként: https://dev.to/nazanin_ashrafi/how-to-darken-an-image-with-css-4f5h
 	Google-maps iframe: https://www.maps.ie/create-google-map/
 	Telefonszám-formátum validálás: https://stackoverflow.com/questions/19840301/how-to-use-jquery-to-validate-north-american-phone-number
+(Az eskuvo.html oldalon található szövegeket a következő oldalakról másoltam: https://www.makvirag.hu/blog/hogyan-rendelj-eskuvoi-tortat, https://www.monpetitdessert.com/projects-7, https://kezmuvestortamuhely.hu/tortak/)
